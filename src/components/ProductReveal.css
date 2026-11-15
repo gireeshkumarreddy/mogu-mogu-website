@@ -1,0 +1,233 @@
+.reveal {
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: clamp(36px, 5vw, 64px);
+}
+.reveal__head {
+  display: grid;
+  gap: 14px;
+  align-items: end;
+}
+.reveal__eyebrow {
+  color: var(--orange-ink);
+}
+.reveal__title {
+  margin-top: 6px;
+  font-size: clamp(30px, calc(var(--canvas-w) * 0.046), 52px);
+}
+.reveal__aside {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+.reveal__body {
+  max-width: 36ch;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.reveal__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: clamp(18px, 2.6vw, 28px);
+}
+.reveal__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px 0 12px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  box-shadow: inset 0 0 0 1.5px rgba(23, 23, 23, 0.14);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+.reveal__tab:hover {
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+.reveal__tab[aria-pressed='true'] {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+.reveal__tab-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--swatch);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.reveal__tab[aria-pressed='true'] .reveal__tab-swatch {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.reveal__stage {
+  position: relative;
+  margin-top: 14px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: var(--accent);
+  isolation: isolate;
+}
+.reveal__stage > picture,
+.reveal__poster,
+.reveal__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.reveal__video {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.reveal__stage:not(.is-poster) .reveal__video {
+  opacity: 1;
+}
+
+.layers {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(60% 75% at 50% 45%, #fff 0%, var(--layers-tint) 55%, var(--accent) 140%);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.reveal__stage:not(.is-poster) .layers {
+  opacity: 1;
+}
+.layers__splash,
+.layers__bottle,
+.layers__final {
+  position: absolute;
+}
+.layers__splash {
+  left: 50%;
+  top: 50%;
+  width: min(118%, 210%);
+  aspect-ratio: 1448 / 1086;
+  translate: -50% -48%;
+}
+.layers__bottle {
+  left: 50%;
+  bottom: 6%;
+  height: 84%;
+  aspect-ratio: 672 / 1488;
+  translate: -50% 0;
+  transform-origin: 50% 90%;
+}
+.layers__splash img,
+.layers__bottle img {
+  width: 100%;
+  height: auto;
+}
+.layers__bottle img {
+  filter: drop-shadow(0 22px 24px rgba(150, 80, 0, 0.3));
+}
+.layers__wave {
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: 0;
+  width: 104%;
+  height: 26%;
+}
+.layers__final {
+  inset: 0;
+}
+.layers__final img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reveal__controls {
+  position: absolute;
+  z-index: 3;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.reveal__btn,
+.reveal__cuts button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: rgba(23, 23, 23, 0.82);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.reveal__btn:hover {
+  background: #000;
+}
+.reveal__btn svg {
+  width: 15px;
+  height: 15px;
+}
+.reveal__btn--ghost {
+  padding: 0;
+  width: 44px;
+}
+.reveal__cuts {
+  margin-left: auto;
+  display: flex;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+  background: rgba(23, 23, 23, 0.82);
+}
+.reveal__cuts button {
+  min-height: 38px;
+  padding: 0 12px;
+  background: transparent;
+  font-size: 11px;
+}
+.reveal__cuts button[aria-pressed='true'] {
+  background: #fff;
+  color: var(--ink);
+}
+@media (min-width: 600px) {
+  .reveal__stage {
+    aspect-ratio: 4 / 3;
+  }
+}
+@media (min-width: 900px) {
+  .reveal__head {
+    grid-template-columns: 1fr auto;
+  }
+  .reveal__aside {
+    justify-content: flex-end;
+  }
+  .reveal__stage {
+    aspect-ratio: 16 / 9;
+  }
+  .reveal__controls {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+}

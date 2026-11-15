@@ -1,0 +1,130 @@
+.finale {
+  padding-bottom: clamp(28px, 4vw, 44px);
+}
+.finale__panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(48px, 7vw, 84px) clamp(20px, 6vw, 80px) clamp(44px, 6vw, 72px);
+  border-radius: var(--radius-l);
+  background:
+    radial-gradient(70% 90% at 50% 100%, rgba(255, 214, 120, 0.55), rgba(255, 214, 120, 0) 70%), var(--orange);
+  text-align: center;
+  isolation: isolate;
+}
+.finale__title {
+  position: relative;
+  z-index: 2;
+  max-width: 13ch;
+  color: #fff;
+  font-size: clamp(32px, calc(var(--canvas-w) * 0.06), 64px);
+  text-shadow: 0 4px 0 rgba(150, 60, 0, 0.25);
+}
+.finale__bottles {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: clamp(6px, 1.4vw, 16px);
+  margin: clamp(22px, 3vw, 34px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.finale__bottles li {
+  width: clamp(44px, 6.4vw, 74px);
+}
+.finale__bottles img {
+  width: 100%;
+  filter: drop-shadow(0 10px 12px rgba(120, 40, 0, 0.28));
+}
+.finale__cta {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(22px, 3vw, 32px);
+}
+.finale__palm {
+  position: absolute;
+  z-index: 1;
+  bottom: -14%;
+  width: clamp(110px, 20%, 220px);
+  pointer-events: none;
+  opacity: 0.95;
+}
+.finale__palm img {
+  width: 100%;
+}
+.finale__palm--left {
+  left: -6%;
+}
+.finale__palm--left img {
+  transform: scaleX(-1);
+}
+.finale__palm--right {
+  right: -6%;
+}
+
+.footer {
+  padding-top: 8px;
+  padding-bottom: 28px;
+}
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.footer__brand {
+  display: block;
+  padding: 4px;
+  margin-left: -4px;
+}
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer__links a:hover {
+  color: var(--orange-ink);
+}
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 24px;
+  padding-top: 14px;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+@media (max-width: 599px) {
+  .finale__palm {
+    bottom: -8%;
+    width: 120px;
+    opacity: 0.85;
+  }
+  .finale__palm--left {
+    left: -14%;
+  }
+  .finale__palm--right {
+    right: -14%;
+  }
+}

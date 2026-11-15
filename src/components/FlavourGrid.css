@@ -1,0 +1,161 @@
+.flavours {
+  position: relative;
+  padding-top: calc(var(--wave-depth) + clamp(36px, 5.5vw, 64px));
+  padding-bottom: clamp(36px, 5vw, 56px);
+}
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.flavours__title {
+  color: var(--orange);
+  font-size: clamp(30px, calc(var(--canvas-w) * 0.04), 46px);
+}
+.flavours__intro {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 18px;
+  margin: clamp(22px, 3.6vw, 44px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  min-width: 0;
+  container-type: inline-size;
+}
+.card__media {
+  position: relative;
+  aspect-ratio: 1122 / 1402;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--accent);
+  isolation: isolate;
+}
+.card__bg-reveal,
+.card__bg-hover {
+  position: absolute;
+  inset: 0;
+}
+.card__bg-hover {
+  inset: -3%;
+  transition: transform 0.6s var(--ease-out);
+}
+.card__bg-hover picture,
+.card__bg {
+  width: 100%;
+  height: 100%;
+}
+.card__bg {
+  object-fit: cover;
+}
+.card__bottle-reveal {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  width: 45%;
+  margin-left: -22.5%;
+}
+.card__bottle-hover {
+  transform-origin: 50% 85%;
+  transition: transform 0.5s var(--ease-out);
+}
+.card__bottle {
+  width: 100%;
+  filter: drop-shadow(0 16px 18px rgba(0, 0, 0, 0.28));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :root[data-motion='on'] .card:hover .card__bottle-hover {
+    transform: translateY(-8px) rotate(var(--tilt));
+  }
+  :root[data-motion='on'] .card:hover .card__bg-hover {
+    transform: translate(var(--shift), 6px) scale(1.035);
+  }
+}
+:root[data-motion='on'] .card:focus-within .card__bottle-hover {
+  transform: translateY(-8px) rotate(var(--tilt));
+}
+:root[data-motion='on'] .card:focus-within .card__bg-hover {
+  transform: translate(var(--shift), 6px) scale(1.035);
+}
+.card:focus-within .card__media {
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 6px var(--accent);
+}
+
+.card__body {
+  padding-top: 14px;
+}
+.card__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card__name {
+  font-size: min(18px, calc((100cqi - 24px) / 10));
+  letter-spacing: 0.02em;
+}
+.card__swatch {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+.card__explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin: 2px 0 -8px -8px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.card__explore:hover {
+  color: var(--orange-ink);
+}
+.card__arrow {
+  transition: transform 0.2s var(--ease-soft);
+}
+.card__explore:hover .card__arrow {
+  transform: translateX(3px);
+}
+.card__desc {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.grid-more {
+  margin-top: clamp(18px, 3vw, 30px);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .card__desc {
+    font-size: 12.5px;
+  }
+}

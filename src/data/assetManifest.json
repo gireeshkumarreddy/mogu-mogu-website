@@ -1,0 +1,316 @@
+{
+  "heroSky": {
+    "width": 1672,
+    "height": 941,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 960,
+        "h": 540
+      },
+      {
+        "w": 1672,
+        "h": 941
+      }
+    ]
+  },
+  "palm": {
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 400,
+        "h": 600
+      },
+      {
+        "w": 760,
+        "h": 1140
+      }
+    ]
+  },
+  "bgStrawberry": {
+    "width": 1122,
+    "height": 1402,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 420,
+        "h": 525
+      },
+      {
+        "w": 760,
+        "h": 950
+      },
+      {
+        "w": 1122,
+        "h": 1402
+      }
+    ]
+  },
+  "bgMango": {
+    "width": 1122,
+    "height": 1402,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 420,
+        "h": 525
+      },
+      {
+        "w": 760,
+        "h": 950
+      },
+      {
+        "w": 1122,
+        "h": 1402
+      }
+    ]
+  },
+  "bgLychee": {
+    "width": 1122,
+    "height": 1402,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 420,
+        "h": 525
+      },
+      {
+        "w": 760,
+        "h": 950
+      },
+      {
+        "w": 1122,
+        "h": 1402
+      }
+    ]
+  },
+  "bgGrape": {
+    "width": 1122,
+    "height": 1402,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 420,
+        "h": 525
+      },
+      {
+        "w": 760,
+        "h": 950
+      },
+      {
+        "w": 1122,
+        "h": 1402
+      }
+    ]
+  },
+  "bottleStrawberry": {
+    "width": 672,
+    "height": 1488,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 240,
+        "h": 531
+      },
+      {
+        "w": 420,
+        "h": 930
+      },
+      {
+        "w": 672,
+        "h": 1488
+      }
+    ]
+  },
+  "bottleMango": {
+    "width": 672,
+    "height": 1488,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 240,
+        "h": 531
+      },
+      {
+        "w": 420,
+        "h": 930
+      },
+      {
+        "w": 672,
+        "h": 1488
+      }
+    ]
+  },
+  "bottleLychee": {
+    "width": 672,
+    "height": 1488,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 240,
+        "h": 531
+      },
+      {
+        "w": 420,
+        "h": 930
+      },
+      {
+        "w": 672,
+        "h": 1488
+      }
+    ]
+  },
+  "bottleGrape": {
+    "width": 672,
+    "height": 1488,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 240,
+        "h": 531
+      },
+      {
+        "w": 420,
+        "h": 930
+      },
+      {
+        "w": 672,
+        "h": 1488
+      }
+    ]
+  },
+  "handCentre": {
+    "width": 712,
+    "height": 1500,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 360,
+        "h": 758
+      },
+      {
+        "w": 600,
+        "h": 1264
+      },
+      {
+        "w": 712,
+        "h": 1500
+      }
+    ]
+  },
+  "handLeft": {
+    "width": 1320,
+    "height": 1062,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 480,
+        "h": 386
+      },
+      {
+        "w": 860,
+        "h": 692
+      },
+      {
+        "w": 1320,
+        "h": 1062
+      }
+    ]
+  },
+  "handRight": {
+    "width": 1316,
+    "height": 1066,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 480,
+        "h": 389
+      },
+      {
+        "w": 860,
+        "h": 697
+      },
+      {
+        "w": 1316,
+        "h": 1066
+      }
+    ]
+  },
+  "splash": {
+    "width": 1448,
+    "height": 1086,
+    "alpha": true,
+    "variants": [
+      {
+        "w": 720,
+        "h": 540
+      },
+      {
+        "w": 1448,
+        "h": 1086
+      }
+    ]
+  },
+  "poster": {
+    "width": 1672,
+    "height": 941,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 960,
+        "h": 540
+      },
+      {
+        "w": 1672,
+        "h": 941
+      }
+    ]
+  },
+  "posterStrawberry": {
+    "width": 1672,
+    "height": 941,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 960,
+        "h": 540
+      },
+      {
+        "w": 1672,
+        "h": 941
+      }
+    ]
+  },
+  "posterLychee": {
+    "width": 1672,
+    "height": 941,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 960,
+        "h": 540
+      },
+      {
+        "w": 1672,
+        "h": 941
+      }
+    ]
+  },
+  "posterGrape": {
+    "width": 1672,
+    "height": 941,
+    "alpha": false,
+    "variants": [
+      {
+        "w": 960,
+        "h": 540
+      },
+      {
+        "w": 1672,
+        "h": 941
+      }
+    ]
+  }
+}

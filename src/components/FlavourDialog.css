@@ -1,0 +1,139 @@
+html.has-dialog {
+  overflow: hidden;
+}
+
+.dialog {
+  width: min(760px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-l);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 40px 100px rgba(40, 10, 0, 0.35);
+  overflow: auto;
+}
+.dialog::backdrop {
+  background: rgba(23, 23, 23, 0.55);
+}
+:root[data-motion='on'] .dialog[open] {
+  animation: dialog-in 0.32s var(--ease-out);
+}
+:root[data-motion='on'] .dialog[open]::backdrop {
+  animation: fade-in 0.25s ease-out;
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.dialog__panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.dialog__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--accent);
+}
+.dialog__media picture:first-child,
+.dialog__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dialog__bottle {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: 26%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.3));
+}
+.dialog__content {
+  padding: 24px 22px 26px;
+}
+.dialog__eyebrow {
+  color: var(--orange-ink);
+}
+.dialog__title {
+  margin-top: 6px;
+  font-size: clamp(30px, 6vw, 42px);
+}
+.dialog__desc {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.dialog__facts {
+  margin: 18px 0 0;
+  border-top: 1px solid var(--line);
+}
+.dialog__facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.dialog__facts dt {
+  font-weight: 600;
+}
+.dialog__facts dd {
+  margin: 0;
+  text-align: right;
+  color: var(--ink-soft);
+}
+.dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.dialog__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+.dialog__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 760px) {
+  .dialog__panel {
+    grid-template-columns: 380px 1fr;
+  }
+  .dialog__media {
+    aspect-ratio: auto;
+    min-height: 460px;
+  }
+  .dialog__bottle {
+    width: 45%;
+  }
+  .dialog__content {
+    align-self: center;
+    padding: 40px 34px;
+  }
+}

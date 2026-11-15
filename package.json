@@ -1,0 +1,26 @@
+{
+  "name": "mogu-mogu-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5388 --strictPort",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview --port 5389 --strictPort",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fontsource/chango": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "gsap": "^3.15.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.7"
+  }
+}

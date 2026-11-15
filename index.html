@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mogu Mogu — Sip. Chew. Go Mogu.</title>
+    <meta
+      name="description"
+      content="Fruity flavour. Chewy nata de coco. A little fun in every bottle. Explore Strawberry, Mango, Lychee and Grape."
+    />
+    <meta name="theme-color" content="#FFFFFF" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="/img/heroSky-1672.avif"
+      imagesrcset="/img/heroSky-960.avif 960w, /img/heroSky-1672.avif 1672w"
+      imagesizes="(min-width: 1280px) 74vw, 100vw"
+      fetchpriority="high"
+    />
+    <script>
+      (function () {
+        var d = document.documentElement,
+          stored = null;
+        try {
+          stored = localStorage.getItem('mogu:motion');
+        } catch (e) {}
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        d.dataset.motion = stored ? stored : reduce ? 'off' : 'on';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript
+      ><p style="background: #fff; padding: 24px; font-family: sans-serif">
+        Mogu Mogu — Sip. Chew. Go Mogu. Please enable JavaScript to explore the flavours.
+      </p></noscript
+    >
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
